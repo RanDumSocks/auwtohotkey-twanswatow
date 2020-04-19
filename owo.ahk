@@ -2,7 +2,7 @@
 ; #Warn  ; Enable warnings to assist with detecting common errors.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-#InputLevel 0
+#InputLevel 2
 
 stutterLetters := ["b", "c", "d", "f", "g", "h", "j", "k", "w", "m", "n", "p", "q", "s", "t", "v"]
 for letter in stutterLetters
@@ -14,62 +14,60 @@ for letter in stutterLetters
 }
 
 sendStutter(letter) {
+  SendLevel 1
   Random, num, 0.0, 1.0
   if (num < 0.2) {
     sendData := " " . letter . "-"
-    SendLevel 0
     SendEvent %sendData%
-    SendLevel 1
     SendEvent %letter%
   } else {
-    SendLevel 0
     SendEvent {Space}
-    SendLevel 1
     SendEvent %letter%
   }
   return
 }
 
+#InputLevel 0
 ^!o::Suspend
 
 :?*:l::
-SendLevel 1
+SendLevel 2
 SendEvent w
 return
 
 :?*:r::
-SendLevel 1
+SendLevel 2
 SendEvent w
 return
 
 :?*:th::
-SendLevel 1
+SendLevel 2
 SendEvent ff
 return
 
 :?*:na::
-SendLevel 1
+SendLevel 2
 SendEvent nya
 return
 
 :?*:no::
-SendLevel 1
+SendLevel 2
 SendEvent nyo
 return
 
 :?*B0:au::
-SendLevel 1
+SendLevel 2
 Send w
 return
 
 :*:o ::
-SendLevel 1
+SendLevel 2
 sendData := "oe "
 SendEvent %sendData%
 return
 
 :?*:!::
-ends := [" UwU", " OwO", " x3", " murr~", " *gwomps*", " *pounces on you*", " ^w^", " >w<", " (´• ω •`)", " (・ω・)"]
+ends := [" UwU", " OwO", " x3", " murr~", " *gwomps*", " *pounces on you*", " ^w^", " >w<", " (´• ω •`)", " (・ω・)", " >//<"]
 Random, num, 1, ends.Length()
 sendData := ends[num]
 SendInput %sendData%
@@ -126,7 +124,7 @@ return
 :*:cat::kitteh
 
 :*:heww::
-SendLevel 1
+SendLevel 2
 SendEvent heck
 return
 
@@ -175,3 +173,5 @@ Loop %keyNum% {
 }
 SendInput %outString%
 return
+
+#InputLevel 2
