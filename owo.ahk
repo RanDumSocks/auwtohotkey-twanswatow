@@ -14,6 +14,21 @@ SendLevel 1
 SendEvent w
 return
 
+:?*:th::
+SendLevel 1
+SendEvent ff
+return
+
+:?*:na::
+SendLevel 1
+SendEvent nya
+return
+
+:?*:no::
+SendLevel 1
+SendEvent nyo
+return
+
 :?*B0:au::
 SendLevel 1
 Send w
@@ -26,7 +41,7 @@ SendEvent %sendData%
 return
 
 :?*:!::
-ends := [" UwU", " OwO", " x3", " (*≧▽≦)", " murr~", " *gwomps*"]
+ends := [" UwU", " OwO", " x3", " murr~", " *gwomps*"]
 Random, num, 1, ends.Length()
 sendData := ends[num]
 SendInput %sendData%
@@ -64,7 +79,7 @@ return
 
 :*:hecko::henwo
 
-:*:that::dat
+:*:ffat::dat
 
 :*:wove::wuv
 
@@ -84,6 +99,8 @@ return
 :*:shit::shoot
 
 :*:fwiend::fwend
+
+:*:ffe::the
 
 :*:stop::stawp
 
