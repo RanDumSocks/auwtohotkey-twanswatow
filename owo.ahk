@@ -152,6 +152,12 @@ return
 
 :*:what::wat
 
+:*:wittwe:widdle
+
+:*:shut up:shush
+
+:*:bitch:jerk
+
 :c*:wmao::
 outString := ""
 refString := "asdfjklgh"
