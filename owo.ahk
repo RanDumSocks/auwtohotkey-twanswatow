@@ -152,11 +152,11 @@ return
 
 :*:what::wat
 
-:*:wittwe:widdle
+:*:wittwe::widdwe
 
-:*:shut up:shush
+:*:shut up::shush
 
-:*:bitch:jerk
+:*:bitch::jewk
 
 :c*:wmao::
 outString := ""
